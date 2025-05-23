@@ -42,7 +42,7 @@ export default function Experience() {
     {
     id: 3,
     type: 'work',
-    title: 'Software Developer Intern',
+    title: 'Full Stack Developer',
     company: 'LinkAmerica Labs',
     period: '2022 - 2023',
     location: 'Costa Rica',
