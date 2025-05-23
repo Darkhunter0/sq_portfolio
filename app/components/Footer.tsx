@@ -1,22 +1,25 @@
-'use client'
+'use client';
 
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('footer');
+
   return (
     <footer id="contact" className="bg-[#0f172a] border-t border-slate-700/40 text-gray-400 pt-12 pb-6 px-4 mt-24">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        
+
         {/* Info */}
         <div className="text-center md:text-left">
           <h4 className="text-lg font-semibold text-white mb-1">
             Sebastián Quesada
           </h4>
           <p className="text-sm text-gray-400">
-            Software Engineer — Python, Rust, React, TypeScript
+            {t('subtitle')}
           </p>
           <p className="text-sm text-gray-500 mt-1">
-            Based in Costa Rica 🇨🇷
+            {t('location')}
           </p>
         </div>
 
@@ -46,7 +49,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-cyan-400 transition"
             aria-label="Email"
-            >
+          >
             <FaEnvelope />
           </a>
         </div>
@@ -55,12 +58,12 @@ export default function Footer() {
       {/* Bottom Line */}
       <div className="mt-10 border-t border-slate-700/40 pt-6 text-center text-xs text-gray-500">
         <p>
-          © {new Date().getFullYear()} Sebastián Quesada. All rights reserved.
+          © {new Date().getFullYear()} Sebastián Quesada. {t('rights')}
         </p>
         <p className="mt-1 italic text-gray-600">
-          Built with Next.js & Tailwind CSS — Designed with passion in 🇨🇷
+          {t('built')}
         </p>
       </div>
     </footer>
-  )
+  );
 }

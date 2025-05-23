@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Sebastián Quesada",
+    "subtitle": "Ingeniero de Software | Python, Rust, TypeScript, React | Código limpio y sistemas rápidos 🚀",
+    "techNote": "/* Tecnologías que manejo */"
+  },
+  "navbar": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "about": {
+    "tag": "Quién soy",
+    "sideAbout": "sobre mí",
+    "titleStart": "Sobre",
+    "titleEnd": "mí",
+
+    "block1": {
+      "part1": "Soy un desarrollador de software que actualmente estudia",
+      "strong1": "Ingeniería de Software",
+      "part2": ". Me apasiona construir sistemas limpios y escalables usando tecnologías modernas como",
+      "strong2": "Rust",
+      "and": " y ",
+      "strong3": "TypeScript",
+      "part3": ". También disfruto mentorizar a otros y mejorar constantemente mi trabajo."
+    },
+
+    "block2": {
+      "part1": "He trabajado en plataformas SaaS, herramientas para desarrolladores y sistemas backend usando",
+      "strong1": "React",
+      "strong2": "Next.js",
+      "strong3": "Node.js",
+      "and": " y ",
+      "strong4": "PostgreSQL"
+    },
+
+    "block3": {
+      "part1": "Mi stack principal incluye:",
+      "strong1": "Rust",
+      "strong2": "TypeScript",
+      "strong3": "React",
+      "strong4": "Node.js",
+      "strong5": "PostgreSQL",
+      "strong6": "Tailwind CSS",
+      "strong7": "Docker",
+      "strong8": "Git"
+    },
+
+    "resume": "Descargar CV",
+    "quote": "“La simplicidad es el alma de la eficiencia.” — Austin Freeman"
+  },
+  "experience": {
+    "tag": "/* MI TRAYECTORIA */",
+    "titleStart": "Experiencia y",
+    "titleEnd": "Formación",
+    "description": "Mi trayectoria profesional y formación educativa en desarrollo de software, desde la universidad hasta aplicaciones reales.",
+    "tabs": {
+      "all": "Todo",
+      "work": "Trabajo",
+      "education": "Educación",
+      "certifications": "Certificaciones"
+    },
+    "cta": {
+      "text": "¿Interesado en trabajar juntos o conocer más sobre mi experiencia?",
+      "button": "Contáctame"
+    },
+    "edu": {
+      "desc1": "Actualmente cursando una carrera en Ingeniería de Software",
+      "desc2": "Enfoque en prácticas modernas de desarrollo de software",
+      "desc3": "Aprendiendo algoritmos, estructuras de datos y diseño de sistemas",
+      "desc4": "Trabajando con varios lenguajes de programación y frameworks"
+    },
+    "cap": {
+      "desc1": "Contribuyo al desarrollo de software para una empresa de salud con sede en EE.UU., centrado en construir y mantener soluciones de alta calidad.",
+      "desc2": "Competente en el uso de bases de datos relacionales (PostgreSQL) y herramientas modernas de desarrollo, incluyendo Alembic, SQLAlchemy, Python, React y TypeScript.",
+      "desc3": "Capacidad demostrada para implementar sistemas eficientes, mantenibles y de alto rendimiento adaptados a las necesidades del negocio.",
+      "desc4": "Trabajo en un entorno Scrum usando Jira, Slack y Confluence, comunicándome diariamente en inglés en reuniones y chats."
+    },
+    "link": {
+      "desc1": "Colaboré en el desarrollo de servicios web utilizando Python, OpenSearch y AWS para facilitar la comunicación fluida de grandes volúmenes de datos entre aplicaciones comerciales y bases de datos.",
+      "desc2": "Competente en arquitecturas serverless de AWS para desarrollo backend eficiente.",
+      "desc3": "Hábil en la creación de interfaces de usuario usando Next.js, React.js y el framework Ant Design (Antd)."
+    },
+    "cert": {
+      "desc1": "Completé un curso integral de 11.5 horas de Rust enfocado en programación moderna de sistemas.",
+      "desc2": "Aprendí conceptos clave de Rust como ownership, borrowing, lifetimes, pattern matching, traits y manejo de errores.",
+      "desc3": "Construí aplicaciones CLI prácticas y exploré buenas prácticas de seguridad de memoria y rendimiento.",
+      "desc4": "Certificado emitido por el instructor Julio Andrés en Udemy."
+    }
+  },
+  "footer": {
+    "subtitle": "Ingeniero de Software — Python, Rust, React, TypeScript",
+    "location": "Basado en Costa Rica 🇨🇷",
+    "rights": "Todos los derechos reservados.",
+    "built": "Hecho con Next.js y Tailwind CSS — Diseñado con pasión en 🇨🇷"
+  }
+}

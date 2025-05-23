@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Sebastián Quesada",
+    "subtitle": "Software Engineer | Python, Rust, TypeScript, React | Clean code & fast systems 🚀",
+    "techNote": "/* Technologies I'm Familiar With */"
+  },
+  "navbar": {
+    "about": "About",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "about": {
+    "tag": "Who I am",
+    "sideAbout": "about me",
+    "titleStart": "About",
+    "titleEnd": "me",
+
+    "block1": {
+      "part1": "I’m a software developer currently pursuing a degree in",
+      "strong1": "Software Engineering",
+      "part2": " I’m passionate about building clean and scalable systems using modern technologies like",
+      "strong2": "Rust",
+      "and": " and ",
+      "strong3": "TypeScript",
+      "part3": ". I also enjoy mentoring others and continuously improving my craft."
+    },
+
+    "block2": {
+      "part1": "I’ve worked on SaaS platforms, developer tools, and backend systems using",
+      "strong1": "React",
+      "strong2": "Next.js",
+      "strong3": "Node.js",
+      "and": " and ",
+      "strong4": "PostgreSQL"
+    },
+
+    "block3": {
+      "part1": "My core stack includes:",
+      "strong1": "Rust",
+      "strong2": "TypeScript",
+      "strong3": "React",
+      "strong4": "Node.js",
+      "strong5": "PostgreSQL",
+      "strong6": "Tailwind CSS",
+      "strong7": "Docker",
+      "strong8": "Git"
+    },
+
+    "resume": "Download Resume",
+    "quote": "“Simplicity is the soul of efficiency.” — Austin Freeman"
+  },
+  "experience": {
+    "tag": "/* MY JOURNEY */",
+    "titleStart": "Experience &",
+    "titleEnd": "Background",
+    "description": "My professional journey and educational background in software development, from university to real-world applications.",
+    "tabs": {
+      "all": "All",
+      "work": "Work",
+      "education": "Education",
+      "certifications": "Certifications"
+    },
+    "cta": {
+      "text": "Interested in working together or learning more about my experience?",
+      "button": "Get in touch"
+    },
+    "edu": {
+      "desc1": "Currently pursuing a degree in Software Engineering",
+      "desc2": "Focus on modern software development practices",
+      "desc3": "Learning algorithms, data structures, and system design",
+      "desc4": "Working with various programming languages and frameworks"
+    },
+    "cap": {
+      "desc1": "Contribute to software development for a U.S.-based healthcare company, focusing on building and maintaining high-quality solutions.",
+      "desc2": "Proficient in leveraging relational databases (PostgreSQL) and modern development tools, including Alembic, SQLAlchemy, Python, React, and TypeScript.",
+      "desc3": "Demonstrated ability to implement efficient, maintainable, and high-performance systems tailored to business needs.",
+      "desc4": "Operate in a Scrum environment using Jira, Slack, and Confluence, engaging daily in English-only communication through meetings and chat."
+    },
+    "link": {
+      "desc1": "Collaborated in the development of web services, utilizing Python, OpenSearch, and AWS to facilitate seamless communication of substantial data volumes between commercial applications and databases.",
+      "desc2": "Proficient in architecting AWS Serverless solutions for efficient back-end development.",
+      "desc3": "Adept at crafting user interfaces using Next.js, React.js, and the Ant Design (Antd) framework."
+    },
+    "cert": {
+      "desc1": "Completed a comprehensive 11.5-hour Rust course focused on modern systems programming.",
+      "desc2": "Learned key Rust concepts such as ownership, borrowing, lifetimes, pattern matching, traits, and error handling.",
+      "desc3": "Built practical CLI applications and explored memory safety and performance best practices.",
+      "desc4": "Certificate issued by instructor Julio Andrés on Udemy."
+    }
+  },
+  "footer": {
+    "subtitle": "Software Engineer — Python, Rust, React, TypeScript",
+    "location": "Based in Costa Rica 🇨🇷",
+    "rights": "All rights reserved.",
+    "built": "Built with Next.js & Tailwind CSS — Designed with passion in 🇨🇷"
+  }
+}

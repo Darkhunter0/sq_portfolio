@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl';
 
 import { FaReact, FaNodeJs, FaPython, FaGithub, FaGitAlt, FaRust } from 'react-icons/fa'
 import { SiTypescript, SiTailwindcss, SiNextdotjs } from 'react-icons/si'
@@ -12,6 +13,7 @@ import NavBar from './components/NavBar'
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0)
+  const t = useTranslations('hero');
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -35,10 +37,10 @@ export default function Home() {
           }}
         >
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r">
-            Sebastián Quesada
+            {t('title')}
           </h1>
           <p className="mt-4 text-xl text-gray-300 max-w-xl mx-auto">
-            Software Engineer | Python, Rust, TypeScript, React | Clean code & fast systems 🚀
+            {t('subtitle')}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-6">
             <FaReact className="text-5xl text-cyan-400 hover:scale-110 transition-all duration-300" />
@@ -52,7 +54,7 @@ export default function Home() {
             <FaPython className="text-5xl text-yellow-400 hover:scale-110 transition-all duration-300" />
           </div>
           <p className="mt-10 text-sm text-gray-500 italic">
-            {`/* Technologies I'm Familiar With */`}
+            {t('techNote')}
           </p>
         </div>
 
