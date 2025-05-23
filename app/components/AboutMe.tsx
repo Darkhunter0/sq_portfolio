@@ -2,6 +2,7 @@
 
 import { HiOutlineLightBulb, HiOutlineCode, HiOutlineAcademicCap } from 'react-icons/hi';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function AboutMe() {
   const t = useTranslations('about');
@@ -29,7 +30,13 @@ export default function AboutMe() {
 
           <div className="bg-[#1e293b] rounded-xl p-8 md:p-10 shadow-lg border border-white/10 text-base md:text-lg text-gray-300 leading-relaxed space-y-8">
             {/* Bloque 1 */}
-            <div className="flex items-start gap-4">
+            <motion.div
+              className="flex items-start gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <HiOutlineLightBulb className="mt-1 text-cyan-400 text-2xl min-w-[1.5rem]" />
               <p>
                 {t('block1.part1')}
@@ -39,10 +46,16 @@ export default function AboutMe() {
                 <strong className="text-white"> {t('block1.strong3')}</strong>.
                 {t('block1.part3')}
               </p>
-            </div>
+            </motion.div>
 
             {/* Bloque 2 */}
-            <div className="flex items-start gap-4">
+            <motion.div
+              className="flex items-start gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               <HiOutlineCode className="mt-1 text-cyan-400 text-2xl min-w-[1.5rem]" />
               <p>
                 {t('block2.part1')}
@@ -52,10 +65,16 @@ export default function AboutMe() {
                 {t('block2.and')}
                 <strong className="text-white"> {t('block2.strong4')}</strong>.
               </p>
-            </div>
+            </motion.div>
 
             {/* Bloque 3 */}
-            <div className="flex items-start gap-4">
+            <motion.div
+              className="flex items-start gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               <HiOutlineAcademicCap className="mt-1 text-cyan-400 text-2xl min-w-[1.5rem]" />
               <p>
                 {t('block3.part1')}
@@ -68,10 +87,15 @@ export default function AboutMe() {
                 <strong className="text-white"> {t('block3.strong7')}</strong>,
                 <strong className="text-white"> {t('block3.strong8')}</strong>.
               </p>
-            </div>
+            </motion.div>
 
             {/* Resume */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+            >
               <a
                 href="/Sebastian-Quesada-Resume.pdf"
                 download
@@ -79,13 +103,19 @@ export default function AboutMe() {
               >
                 {t('resume')} →
               </a>
-            </div>
+            </motion.div>
           </div>
 
           {/* Cita */}
-          <p className="mt-8 text-gray-500 italic text-sm text-center md:text-left">
+          <motion.p
+            className="mt-8 text-gray-500 italic text-sm text-center md:text-left"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+          >
             {t('quote')}
-          </p>
+          </motion.p>
         </div>
       </div>
     </section>

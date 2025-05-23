@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { FaGraduationCap, FaBriefcase, FaCode, FaCertificate } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function Experience() {
   const t = useTranslations('experience');
@@ -130,10 +131,17 @@ export default function Experience() {
           <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400/50 via-slate-600/30 to-transparent hidden md:block"></div>
 
           <div className="space-y-12">
-            {filteredExperiences.map((exp) => {
+            {filteredExperiences.map((exp, index) => {
               const IconComponent = exp.icon;
               return (
-                <div key={exp.id} className="relative flex flex-col md:flex-row gap-6 group">
+                <motion.div
+                  key={exp.id}
+                  className="relative flex flex-col md:flex-row gap-6 group"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
                   <div className="hidden md:flex absolute left-6 w-4 h-4 bg-slate-900 border-2 border-cyan-400 rounded-full items-center justify-center z-10">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                   </div>
@@ -175,7 +183,7 @@ export default function Experience() {
                       ))}
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

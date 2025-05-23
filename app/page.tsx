@@ -1,63 +1,104 @@
-'use client'
+'use client';
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
-import { FaReact, FaNodeJs, FaPython, FaGithub, FaGitAlt, FaRust } from 'react-icons/fa'
-import { SiTypescript, SiTailwindcss, SiNextdotjs } from 'react-icons/si'
+import { FaReact, FaNodeJs, FaPython, FaGithub, FaGitAlt, FaRust } from 'react-icons/fa';
+import { SiTypescript, SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 
-import AboutMe from './components/AboutMe'
-import Experience from './components/Experience'
-import Footer from './components/Footer'
-import NavBar from './components/NavBar'
+import AboutMe from './components/AboutMe';
+import Experience from './components/Experience';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 
 export default function Home() {
-  const [scrollY, setScrollY] = useState(0)
+  const [scrollY, setScrollY] = useState(0);
   const t = useTranslations('hero');
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
       <NavBar />
       <main className="relative text-white overflow-hidden bg-[#0f172a]">
         {/* Background Effects */}
-        <div className="fixed inset-0 bg-gradient-to-b from-blue-950/20 via-slate-900/40 to-cyan-950/20"></div>
+        <div className="fixed inset-0 bg-gradient-to-b from-blue-950/20 via-slate-900/40 to-cyan-950/20" />
 
         {/* HERO */}
-        <div
+        <motion.div
           className="relative z-10 text-center flex flex-col items-center justify-center px-4 pt-32 pb-36"
           style={{
             transform: `translateY(${scrollY * 0.5}px)`,
             opacity: Math.max(0, 1 - scrollY / 400)
           }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r">
+          <motion.h1
+            className="text-4xl md:text-6xl font-bold bg-gradient-to-r"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
             {t('title')}
-          </h1>
-          <p className="mt-4 text-xl text-gray-300 max-w-xl mx-auto">
-            {t('subtitle')}
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-6">
-            <FaReact className="text-5xl text-cyan-400 hover:scale-110 transition-all duration-300" />
-            <SiTypescript className="text-5xl text-blue-400 hover:scale-110 transition-all duration-300" />
-            <SiNextdotjs className="text-5xl text-white hover:scale-110 transition-all duration-300" />
-            <FaNodeJs className="text-5xl text-green-500 hover:scale-110 transition-all duration-300" />
-            <FaRust className="text-5xl text-orange-500 hover:scale-110 transition-all duration-300" />
-            <SiTailwindcss className="text-5xl text-teal-300 hover:scale-110 transition-all duration-300" />
-            <FaGitAlt className="text-5xl text-red-500 hover:scale-110 transition-all duration-300" />
-            <FaGithub className="text-5xl text-gray-300 hover:scale-110 transition-all duration-300" />
-            <FaPython className="text-5xl text-yellow-400 hover:scale-110 transition-all duration-300" />
-          </div>
-          <p className="mt-10 text-sm text-gray-500 italic">
-            {t('techNote')}
-          </p>
-        </div>
+          </motion.h1>
 
+          <motion.p
+            className="mt-4 text-xl text-gray-300 max-w-xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            {t('subtitle')}
+          </motion.p>
+
+          <motion.div
+            className="mt-8 flex flex-wrap justify-center gap-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
+            {[
+              { Icon: FaReact, color: 'text-cyan-400' },
+              { Icon: SiTypescript, color: 'text-blue-400' },
+              { Icon: SiNextdotjs, color: 'text-white' },
+              { Icon: FaNodeJs, color: 'text-green-500' },
+              { Icon: FaRust, color: 'text-orange-500' },
+              { Icon: SiTailwindcss, color: 'text-teal-300' },
+              { Icon: FaGitAlt, color: 'text-red-500' },
+              { Icon: FaGithub, color: 'text-gray-300' },
+              { Icon: FaPython, color: 'text-yellow-400' }
+            ].map(({ Icon, color }, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 + index * 0.05 }}
+              >
+                <Icon className={`text-5xl ${color} transition-all duration-300`} />
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.p
+            className="mt-10 text-sm text-gray-500 italic"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+          >
+            {t('techNote')}
+          </motion.p>
+        </motion.div>
+
+        {/* Wave animation */}
         <div className="relative -mt-20 z-5">
           <svg
             className="w-full h-32 transform rotate-180"
@@ -76,6 +117,7 @@ export default function Home() {
           </svg>
         </div>
 
+        {/* Main content */}
         <div className="relative z-10 bg-gradient-to-b from-slate-800/80 to-[#0f172a]">
           <AboutMe />
           <Experience />
@@ -83,6 +125,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  )
+  );
 }
-
